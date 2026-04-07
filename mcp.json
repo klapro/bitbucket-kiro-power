@@ -1,0 +1,19 @@
+{
+    "mcpServers": {
+        "bitbucket-mcp": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "bitbucket-mcp@latest"
+            ],
+            "env": {
+                "BITBUCKET_URL": "",
+                "BITBUCKET_USERNAME": "",
+                "BITBUCKET_PASSWORD": "",
+                "BITBUCKET_WORKSPACE": ""
+            },
+            "disabled": false,
+            "autoApprove": []
+        }
+    }
+}
