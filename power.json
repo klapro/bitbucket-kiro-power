@@ -1,0 +1,28 @@
+{
+    "name": "bitbucket-kiro-power",
+    "displayName": "Bitbucket for Kiro",
+    "version": "1.0.0",
+    "description": "Access Bitbucket Cloud and Server — manage repositories, pull requests, code reviews, pipelines, and more.",
+    "author": "klapro",
+    "mcpServers": {
+        "bitbucket-mcp": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "bitbucket-mcp@latest"
+            ]
+        }
+    },
+    "keywords": [
+        "bitbucket",
+        "atlassian",
+        "repositories",
+        "pull requests",
+        "PRs",
+        "pipelines",
+        "code review",
+        "branches",
+        "git",
+        "ci/cd"
+    ]
+}
