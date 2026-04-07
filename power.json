@@ -9,7 +9,7 @@
             "command": "npx",
             "args": [
                 "-y",
-                "bitbucket-mcp@latest"
+                "bitbucket-kiro-power"
             ]
         }
     },

@@ -1,12 +1,12 @@
 {
-  "name": "bitbucket-mcp",
-  "version": "5.0.6",
+  "name": "bitbucket-kiro-power",
+  "version": "1.0.0",
   "description": "Model Context Protocol (MCP) server for Bitbucket Cloud and Server API integration",
   "mcpName": "io.github.MatanYemini/bitbucket-mcp",
   "type": "module",
   "main": "dist/index.js",
   "bin": {
-    "bitbucket-mcp": "dist/index.js"
+    "bitbucket-kiro-power": "dist/index.js"
   },
   "files": [
     "dist",
@@ -43,11 +43,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MatanYemini/bitbucket-mcp"
+    "url": "git+https://github.com/klapro/bitbucket-kiro-power"
   },
-  "homepage": "https://github.com/MatanYemini/bitbucket-mcp#readme",
+  "homepage": "https://github.com/klapro/bitbucket-kiro-power#readme",
   "bugs": {
-    "url": "https://github.com/MatanYemini/bitbucket-mcp/issues"
+    "url": "https://github.com/klapro/bitbucket-kiro-power/issues"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.1.1",
