@@ -7,9 +7,7 @@
                 "bitbucket-mcp@latest"
             ],
             "env": {
-                "BITBUCKET_URL": "",
-                "BITBUCKET_USERNAME": "",
-                "BITBUCKET_PASSWORD": "",
+                "BITBUCKET_TOKEN": "",
                 "BITBUCKET_WORKSPACE": ""
             },
             "disabled": false,

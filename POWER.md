@@ -2,7 +2,19 @@
 name: "bitbucket-kiro-power"
 displayName: "Bitbucket for Kiro"
 description: "Access Bitbucket Cloud and Server — manage repositories, pull requests, code reviews, pipelines, and more."
-keywords: ["bitbucket", "atlassian", "repositories", "pull requests", "PRs", "pipelines", "code review", "branches", "git", "ci/cd"]
+keywords:
+  [
+    "bitbucket",
+    "atlassian",
+    "repositories",
+    "pull requests",
+    "PRs",
+    "pipelines",
+    "code review",
+    "branches",
+    "git",
+    "ci/cd",
+  ]
 ---
 
 # Bitbucket for Kiro
@@ -11,12 +23,12 @@ Access Bitbucket Cloud and Server directly from Kiro. Manage repositories, pull 
 
 ## Setup
 
-### 1. Create a Bitbucket App Password
+### 1. Create a Bitbucket API Token
 
-1. Go to [Bitbucket App Passwords](https://bitbucket.org/account/settings/app-passwords/)
-2. Click "Create app password"
-3. Grant the permissions you need (repositories read/write, pull requests read/write, pipelines read/write)
-4. Copy the generated password
+1. Go to [Bitbucket API Tokens](https://bitbucket.org/account/settings/api-tokens/)
+2. Click "Create API token"
+3. Select the scopes you need (repositories read/write, pull requests read/write, pipelines read/write)
+4. Copy the generated token
 
 ### 2. Configure Your Credentials
 
@@ -28,8 +40,7 @@ After installing the power, add your credentials to `~/.kiro/settings/mcp.json` 
     "mcpServers": {
       "bitbucket-mcp": {
         "env": {
-          "BITBUCKET_USERNAME": "you@example.com",
-          "BITBUCKET_PASSWORD": "<your-app-password>",
+          "BITBUCKET_TOKEN": "<your-api-token>",
           "BITBUCKET_WORKSPACE": "your-workspace-slug"
         }
       }
@@ -38,19 +49,19 @@ After installing the power, add your credentials to `~/.kiro/settings/mcp.json` 
 }
 ```
 
-> **Note:** Place this under `powers.mcpServers`, not the top-level `mcpServers`. You can use either `BITBUCKET_PASSWORD` (app password) or `BITBUCKET_TOKEN` (access token) for authentication.
+> **Note:** Place this under `powers.mcpServers`, not the top-level `mcpServers`. You can alternatively use `BITBUCKET_USERNAME` + `BITBUCKET_PASSWORD` for legacy app password auth (deprecated, disabled June 2026).
 
 ### Environment Variables
 
 | Variable              | Required | Description                                                |
 | --------------------- | -------- | ---------------------------------------------------------- |
-| `BITBUCKET_USERNAME`  | Yes      | Your Bitbucket username or email                           |
-| `BITBUCKET_PASSWORD`  | Yes\*    | App password (or use `BITBUCKET_TOKEN` instead)            |
-| `BITBUCKET_TOKEN`     | Yes\*    | Access token (alternative to app password)                 |
+| `BITBUCKET_TOKEN`     | Yes\*    | API token (recommended)                                    |
+| `BITBUCKET_USERNAME`  | Yes\*    | Your Bitbucket username (legacy auth)                      |
+| `BITBUCKET_PASSWORD`  | Yes\*    | App password (legacy, deprecated June 2026)                |
 | `BITBUCKET_WORKSPACE` | No       | Default workspace slug                                     |
 | `BITBUCKET_URL`       | No       | API base URL (defaults to `https://api.bitbucket.org/2.0`) |
 
-\*One of `BITBUCKET_PASSWORD` or `BITBUCKET_TOKEN` is required.
+\*Use `BITBUCKET_TOKEN` or `BITBUCKET_USERNAME` + `BITBUCKET_PASSWORD`.
 
 ### Optional Variables
 
