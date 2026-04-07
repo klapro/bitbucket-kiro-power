@@ -2,19 +2,7 @@
 name: "bitbucket-kiro-power"
 displayName: "Bitbucket for Kiro"
 description: "Access Bitbucket Cloud and Server — manage repositories, pull requests, code reviews, pipelines, and more."
-keywords:
-  [
-    "bitbucket",
-    "atlassian",
-    "repositories",
-    "pull requests",
-    "PRs",
-    "pipelines",
-    "code review",
-    "branches",
-    "git",
-    "ci/cd",
-  ]
+keywords: ["bitbucket", "atlassian", "repositories", "pull requests", "PRs", "pipelines", "code review", "branches", "git", "ci/cd"]
 ---
 
 # Bitbucket for Kiro
