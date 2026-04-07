@@ -40,6 +40,7 @@ After installing the power, add your credentials to `~/.kiro/settings/mcp.json` 
     "mcpServers": {
       "bitbucket-mcp": {
         "env": {
+          "BITBUCKET_USERNAME": "you@example.com",
           "BITBUCKET_TOKEN": "<your-api-token>",
           "BITBUCKET_WORKSPACE": "your-workspace-slug"
         }
@@ -49,19 +50,19 @@ After installing the power, add your credentials to `~/.kiro/settings/mcp.json` 
 }
 ```
 
-> **Note:** Place this under `powers.mcpServers`, not the top-level `mcpServers`. You can alternatively use `BITBUCKET_USERNAME` + `BITBUCKET_PASSWORD` for legacy app password auth (deprecated, disabled June 2026).
+> **Note:** Place this under `powers.mcpServers`, not the top-level `mcpServers`. The new Bitbucket API tokens require both `BITBUCKET_USERNAME` and `BITBUCKET_TOKEN` (uses Basic auth internally). Legacy app passwords use `BITBUCKET_USERNAME` + `BITBUCKET_PASSWORD` (deprecated June 2026).
 
 ### Environment Variables
 
-| Variable              | Required | Description                                                |
-| --------------------- | -------- | ---------------------------------------------------------- |
-| `BITBUCKET_TOKEN`     | Yes\*    | API token (recommended)                                    |
-| `BITBUCKET_USERNAME`  | Yes\*    | Your Bitbucket username (legacy auth)                      |
-| `BITBUCKET_PASSWORD`  | Yes\*    | App password (legacy, deprecated June 2026)                |
-| `BITBUCKET_WORKSPACE` | No       | Default workspace slug                                     |
-| `BITBUCKET_URL`       | No       | API base URL (defaults to `https://api.bitbucket.org/2.0`) |
+| Variable              | Required | Description                                                   |
+| --------------------- | -------- | ------------------------------------------------------------- |
+| `BITBUCKET_USERNAME`  | Yes      | Your Bitbucket email (required for API token and legacy auth) |
+| `BITBUCKET_TOKEN`     | Yes\*    | API token (recommended, use with USERNAME for Basic auth)     |
+| `BITBUCKET_PASSWORD`  | Yes\*    | App password (legacy, deprecated June 2026)                   |
+| `BITBUCKET_WORKSPACE` | No       | Default workspace slug                                        |
+| `BITBUCKET_URL`       | No       | API base URL (defaults to `https://api.bitbucket.org/2.0`)    |
 
-\*Use `BITBUCKET_TOKEN` or `BITBUCKET_USERNAME` + `BITBUCKET_PASSWORD`.
+\*Use `BITBUCKET_TOKEN` (recommended) or `BITBUCKET_PASSWORD` (legacy). Both require `BITBUCKET_USERNAME`.
 
 ### Optional Variables
 
