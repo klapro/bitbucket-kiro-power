@@ -1,7 +1,7 @@
 {
     "name": "bitbucket-kiro-power",
     "displayName": "Bitbucket for Kiro",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Access Bitbucket Cloud and Server — manage repositories, pull requests, code reviews, pipelines, and more.",
     "author": "klapro",
     "mcpServers": {
